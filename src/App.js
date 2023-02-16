@@ -1,12 +1,14 @@
 import Form from "./components/form";
-import Question from "./components/question";
+import Question from "./components/questionSection";
+import RatingSection from './components/rating';
+import { SubmitStyle } from './components/submit/submitStyle';
 
 function App() {
   return (
     <Form>
-        <Question>
-          <p>Porque não está aparecendo?</p>
-        </Question>
+        <Question></Question>
+        <RatingSection></RatingSection>
+        <SubmitStyle type="submit">Submit</SubmitStyle>
     </Form>
   );
 }

@@ -6,16 +6,16 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle `
   * {
+    border: none;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: none;
     outline: none;
-    box-sizing: border-box;
   }
 
   a {
-    text-decoration: none;
     color: var(--text-color);
+    text-decoration: none;
   }
 
   ul {
@@ -44,18 +44,14 @@ const GlobalStyle = createGlobalStyle `
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-  }
+  
 `
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <GlobalStyle/>
-    <App />
+    <App/>
   </React.StrictMode>
 );
 

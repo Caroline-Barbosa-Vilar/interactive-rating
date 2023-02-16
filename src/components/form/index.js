@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 const FormContainer = styled.form `
-  width: 41.2rem;
-  height: 41.5rem;
+  width: 32.5rem;
+  height: 36rem;
   background-color: #19202C;
-  border-radius: 2.5rem;
+  border-radius: 1.5rem;
 `
-
-function Form() {
+function Form(props) {
   return (
-    <form></form>
+    <FormContainer>
+      {props.children}
+    </FormContainer>
   )
 }
 
