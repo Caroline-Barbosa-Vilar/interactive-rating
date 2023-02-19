@@ -20,12 +20,13 @@ export const SubmitStyle = styled.button `
     cursor: pointer;
   }
 `
-function Submit() {
-  const SendTo = (event) => {
-    event.preventDefault();
-  }
+function Submit(props) {
+  const { onSubmit } = props;
+  // const SendTo = (event) => {
+  //   event.preventDefault();
+  // }
   return (
-    <SubmitStyle onSubmit={SendTo}>Submit</SubmitStyle>
+    <SubmitStyle onClick={onSubmit}>Submit</SubmitStyle>
   )
 }
 

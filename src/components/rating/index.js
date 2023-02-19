@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 import { titleColor, textColor, circleBgColor } from '../UI/variables';
 
 const RatingContainer = styled.section`
@@ -28,21 +29,22 @@ const RatingButton = styled.button`
 `
 
 function RatingSection() {
-  let InputValue = '';
+  const [selectedValue, setSelectedValue] = useState(null);
+  console.log(selectedValue)
 
-  const ChosenOne = (event) => {
-    InputValue = event.target.value;
-  }
-  console.log(InputValue)
+  const handleButtonClick = (value) => {
+    setSelectedValue(value);
+  };
 
   return (
     <RatingContainer>
       <input type="hidden" name="rate"/>
-      <RatingButton onClick={ChosenOne} value={InputValue}>1</RatingButton>
-      <RatingButton value={2}>2</RatingButton>
-      <RatingButton value={3}>3</RatingButton>
-      <RatingButton value={4}>4</RatingButton>
-      <RatingButton value={5}>5</RatingButton>
+      <RatingButton  type="button" onClick={() => handleButtonClick(1)} value={1}>1</RatingButton>
+      <RatingButton  type="button" onClick={() => handleButtonClick(2)} value={2}>2</RatingButton>
+      <RatingButton  type="button" onClick={() => handleButtonClick(3)} value={3}>3</RatingButton>
+      <RatingButton  type="button" onClick={() => handleButtonClick(4)} value={4}>4</RatingButton>
+      <RatingButton  type="button" onClick={() => handleButtonClick(5)} value={5}>5</RatingButton>
+      <p key={selectedValue}></p>
     </RatingContainer>
   );
 }
