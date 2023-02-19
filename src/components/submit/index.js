@@ -20,3 +20,13 @@ export const SubmitStyle = styled.button `
     cursor: pointer;
   }
 `
+function Submit() {
+  const SendTo = (event) => {
+    event.preventDefault();
+  }
+  return (
+    <SubmitStyle onSubmit={SendTo}>Submit</SubmitStyle>
+  )
+}
+
+export default Submit;

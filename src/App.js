@@ -1,14 +1,15 @@
+import styled from "styled-components";
 import Form from "./components/form";
 import Question from "./components/questionSection";
 import RatingSection from './components/rating';
-import { SubmitStyle } from './components/submit/submitStyle';
+import Submit from './components/submit';
 
 function App() {
   return (
     <Form>
         <Question></Question>
         <RatingSection></RatingSection>
-        <SubmitStyle type="submit">Submit</SubmitStyle>
+        <Submit></Submit>
     </Form>
   );
 }

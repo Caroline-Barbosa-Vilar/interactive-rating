@@ -1,7 +1,34 @@
-import React from 'react';
-import { IconContainer, QuestionTitle, QuestionText, StarStyle } from './style'
+import styled from "styled-components";
+import { titleColor, textColor, circleBgColor } from '../UI/variables';
 import starIcon from '../../img/icon-star.svg';
 
+const IconContainer = styled.div `
+align-items: center;
+background-color: ${circleBgColor};
+border-radius: 50%;
+position: relative;
+height: 4rem;
+left: 22px;
+margin-top: 2rem; 
+top: 23px;
+width: 4rem;
+`
+const StarStyle = styled.img `
+position: relative;
+top: 12px;
+left: 11px;
+`
+const QuestionTitle = styled.h1 `
+color: ${titleColor};
+font-size: 2.4rem;
+padding: 4.2rem 0 0 2rem;
+`
+const QuestionText = styled.p `
+color: ${textColor};
+font-size: 1.4rem;
+line-height: 2.3rem;
+padding: 1.3rem 2rem 0 2rem;
+`
 
 function Question() {
   return (
